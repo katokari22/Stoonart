@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Stooon Art</title>
+    <link rel="stylesheet" type="text/css" href="Source.css">
+    <script src="script.js" defer></script>
+    <style>
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+        }
+        .product-card {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 250px;
+            display: none; /* Hide all product cards by default */
+        }
+        .product-card img {
+            width: 100%; /* Adjust as needed */
+            height: auto; /* Adjust as needed */
+        }
+        .filter {
+            list-style-type: none;
+        }
+        .filter li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .filter button:hover {
+            background-color: #ddd; /* Add a hover effect to the buttons */
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body onload="filter('jackets')"> <!-- Call the filter function when the page loads -->
+    <div class="container">
+        <nav>
+            <img src="logo.png" class="logo" alt="Stooon Art Logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="Products.html">Products</a>
+                    <div class="dropdown-content">
+                        <a href="Products.html">Clothing</a>
+                        <a href="accessories.html">Accessories</a>
+                        <a href="CustomC.html">Custom Clothes</a>
+                        <a href="CustomA.html">Custom Accessories</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="buttons-filter">
+        <ul class="filter">
+            <li><button onclick="filter('hoodies')">Hoodies</button></li>
+            <li><button onclick="filter('jackets')">Jackets</button></li>
+            <li><button onclick="filter('sandals')">Sandals</button></li>
+            <li><button onclick="filter('shoes')">Shoes</button></li>
+        </ul>
+    </div>
+        <div class="product-grid">
+            <div class="product-card hoodies">
+                <a href="Hoodie1.html">
+                <img src="Hoodies/Hoodie1.jpg" alt="Hoodie 1"></a>
+                <div class="product-description">
+                <p>Moroccan Mosaic Marvel Hoodie</p>
+            </div>
+            </div>
+            <div class="product-card hoodies">
+                <a href="Hoodie2.html">
+                <img src="Hoodies/Hoodie2.jpg" alt="Hoodie 2"></a>
+                <div class="product-description">
+                <p>3ish Style Hoodie</p>
+            </div>
+            </div>
+            <div class="product-card jackets">
+                <a href="Jacket1.html">
+                <img src="Jackets/jacket1.jpg" alt="Jacket 1"></a>
+                <div class="product-description">
+                <p>Zellige Artistry White Jacket</p>
+            </div>
+            </div>
+            <div class="product-card jackets">
+                <a href="Jacket2.html">
+                <img src="Jackets/jacket2.jpg" alt="Jacket 2"></a>
+                <div class="product-description">
+                <p>Mosaic Mirage Bomber Jacket</p>
+            </div>
+            </div>
+            <div class="product-card jackets">
+                <a href="Jacket3.html">
+                <img src="Jackets/jacket3.jpg" alt="Jacket 3"></a>
+                <div class="product-description">
+                <p>Zellige Zenith Jacket</p>
+            </div>
+            </div>
+            <div class="product-card jackets">
+                <a href="jacket4.html">
+                <img src="Jackets/jacket4.jpg" alt="Jacket 3"></a>
+                <div class="product-description">
+                <p>StooonArt’s Fusion Jabador Jacket</p>
+            </div>
+            </div>
+            <div class="product-card sandals">
+                <a href="Sandals1.html">
+                <img src="Sandals/Sandals1.jpg" alt="Sandals 1"></a>
+                <div class="product-description">
+                <p>Moroccan Summer Sandals</p>
+            </div>
+            </div>
+            <div class="product-card sandals">
+                <a href="Sandals2.html">
+                <img src="Sandals/Sandals2.jpg" alt="Sandals 2"></a>
+                <div class="product-description">
+                <p>Berber  Elegance Sandals</p>
+            </div>
+            </div>
+            <div class="product-card shoes">
+                <a href="Shoes1.html">
+                <img src="Shoes/Shoes1.jpg" alt="Shoes1"></a>
+                <div class="product-description">
+                <p>Zellige Harmony Sneaker</p>
+            </div>
+            </div>
+
+        </div>
+        <script>
+            function filter(category) {
+                var products = document.getElementsByClassName('product-card');
+                for (var i = 0; i < products.length; i++) {
+                    if (products[i].classList.contains(category)) {
+                        products[i].style.display = 'block';
+                    } else {
+                        products[i].style.display = 'none';
+                    }
+                }
+            }
+        </script>
+    </div>
+    <footer>
+        <a href="https://www.instagram.com/stoonart.shop/" target="_blank"><img src="Instagram.svg" alt="Instagram"></a>
+        <a href="https://www.facebook.com/sami.rajawai" target="_blank"><img src="Facebook.svg" alt="Facebook"></a>
+    </footer>  
+</body>
+</html>

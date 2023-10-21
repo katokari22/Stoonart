@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1-h1 {
+    position: relative;
+    font-size: 2.5vw;
+    color: white;
+    -webkit-text-stroke: 0.3vw #b1adad;
+    text-transform: uppercase;
+}
+
+h1-h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: auto;
+    left: auto;
+    width: 0;
+    height: auto;
+    color: rgb(73, 68, 68);
+    -webkit-text-stroke: rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    overflow: hidden;
+    animation: animate 3.5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0%;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+
+h1-h2 {
+    font-size: 2.5vw;
+    color: transparent;
+    -webkit-text-stroke: 1px gray;
+    background: url(textback/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-image: url('Background1.jpg');
+    background-size: fit;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 1.2vw;
+    background-blend-mode: darken;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+.video-container {
+    width: 25%; /* Adjust as needed */
+    height: auto;
+    margin-top: 7px; /* Add space above the video */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    opacity: 0.5; /* Make the video container invisible initially */
+}
+
+.video-container:hover {
+    opacity: 1; /* Make the video container visible when hovered over */
+}
+
+@media screen and (max-width: 768px) {
+    .filter li {
+        flex-direction: row;
+    }
+    .switch{
+        display: none;
+    }
+    .filter li button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-right: -12px; /* Adjust the gap between buttons */
+    }
+
+    .filter li button:focus {
+        outline: none;
+    }
+    h1-h1,
+    h1-h2,
+    .container,
+    .text-box p {
+        font-family: monospace;
+        font-size: 0.9em; /* Adjust as needed */
+    }
+    .container{
+    background-image: url('Background2.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode:normal;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0; /* Remove the left padding on mobile */
+    }
+    nav ul li a {
+        padding: 75px 5px; /* Reduce padding on mobile */
+    }
+    .product-description {
+        margin-left: 20px; /* Add space between the image and the text */
+        margin-bottom: 20px; /* Add space at the bottom */
+        background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+        padding: 10px; /* Add some padding */
+        border-radius: 20px; /* Optional: add rounded corners */
+    }
+    button {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 5px 22px;
+        border-radius: 6px;
+        background: #282f33;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+    footer {
+        text-align: bottom; /* Center align for mobile */
+    }
+    .dropdown:hover .dropdown-content {
+        display:none; /* Disable hover on mobile */
+    }
+
+    .dropdown-content {
+        z-index: 100;
+        position:relative; /* Position dropdown relative to the parent on mobile */
+        width: 100%; /* Make the dropdown content take up the full width of the screen */
+        border-radius: 15px;
+    }
+        .content {
+            flex-direction: column;
+        }
+    
+        .video-container {
+            opacity: 1;
+             width: 80%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-content {
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-content img {
+        flex-direction: column;    
+        width: 80%; /* Adjust as needed */
+    }
+    
+}
+
+.switch {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 60px;
+    height: 34px;
+}
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: gray;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px gray;
+  }
+  
+  input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+  border-radius:34px;
+  }
+  
+  .slider.round:before {
+  border-radius:50%;
+  }
+  
+body.active {
+    background-color: #444;
+}
+nav {
+    display: flex;
+    justify-content: space-between; /* Aligns logo to the left and list to the right */
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; 
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding: 0 10px; /* Adjust as needed */
+    position: relative; /* Add this line */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration : none;
+    padding: 10px 20px; /* Adjust as needed */
+    border-radius: 15px; /* Adjust as needed */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform to the transition property */
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: calc(50% - (50% /2));
+    background-color: #fff;
+}
+
+nav ul li a:hover {
+    background-color: #c9c9c9; /* Gray color on hover */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    padding: 15px 10px;
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    max-height: 120vh; /* This will ensure the dropdown fits within the viewport height */
+    overflow-y: auto; /* This will add a scrollbar if the content exceeds the max-height */
+    background-color: #C68C4F;/* This will give the dropdown a gray background */
+    z-index: 10;
+    border-radius: 15px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency as needed */
+    padding: 20px;
+    border-radius: 10px;
+    color: #333; /* Adjust text color as needed */
+    max-width: 1250px; /* Adjust as needed */
+    margin: auto;
+    text-align: justify;
+    font-family: monospace;
+    margin-bottom: 20px;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 99.5%;
+    color: white;
+    text-align: right;
+    margin-top: 2rem;
+}
+
+footer a img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+footer a:hover img {
+    transform: scale(1.2);
+}
+
+.filter li button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter li button:hover {
+    background-color: #666;
+    transform: scale(1.1);
+}
+
+.filter li button:focus {
+    outline: none;
+}
+
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align items horizontally in the center */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    display: none; /* Hide all product cards by default */
+    transition: transform 0.3s ease; /* Add this line */
+}
+
+.product-card img {
+    max-width: 100%; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+}
+
+.product-card:hover {
+    transform: scale(1.1); /* Add a hover effect to the product cards */
+}
+
+.product-card p {
+    font-family: 'Comic Sans MS', monospace, sans-serif; /* Use a fun font for the product descriptions */
+}
+.product-content {
+    display: flex; /* Add this line */
+    align-items: center; /* Add this line */
+}
+.product-content img {
+    max-width: 100%; /* This will make the image width adjust to its container */
+    height: auto; /* This will maintain the aspect ratio of the image */
+}
+.product-description {
+    margin-left: 20px; /* Add space between the image and the text */
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+    padding: 10px; /* Add some padding */
+    border-radius: 5px; /* Optional: add rounded corners */
+}
+button {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding: 8px 22px;
+    border-radius: 6px;
+    background: #282f33;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+button:active {
+    transform: scale(0.96)
+}
