@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /Cases
+Disallow: /FrontImages
+Disallow: /Hoodies
+Disallow: /Jackets
+Disallow: /RearImages
+Disallow: /Sandals
+Disallow: /Shoes
+Disallow: /textback
+Disallow: /Animation.css
+Disallow: /Background1.jpg
+Disallow: /Background2.jpg
+Disallow: /Background3.jpg
+Disallow: CNAME
+Allow: /CustomC.html
+Allow: /index.html
+Allow: /about.html
+Allow: /Products.html
+Allow: /accessories.html
+Allow: /CustomA.html
+
