@@ -176,6 +176,103 @@ h1-h2 {
     }
     
 }
+@media screen and (min-width:769px) and (max-width:1200px)  {
+    .filter li {
+        flex-direction: row;
+    }
+    .switch{
+        display: none;
+    }
+    .filter li button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-right: -12px; /* Adjust the gap between buttons */
+    }
+
+    .filter li button:focus {
+        outline: none;
+    }
+    h1-h1,
+    h1-h2,
+    .container,
+    .text-box p {
+        font-family: monospace;
+        font-size: 1em; /* Adjust as needed */
+    }
+    .container{
+    background-image: url('Background2.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode:normal;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0; /* Remove the left padding on mobile */
+    }
+    nav ul li a {
+        padding: 75px 5px; /* Reduce padding on mobile */
+    }
+    .product-description {
+        margin-left: 20px; /* Add space between the image and the text */
+        margin-bottom: 20px; /* Add space at the bottom */
+        background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+        padding: 10px; /* Add some padding */
+        border-radius: 20px; /* Optional: add rounded corners */
+    }
+    button {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 5px 22px;
+        border-radius: 6px;
+        background: #282f33;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+    footer {
+        text-align: bottom; /* Center align for mobile */
+    }
+    .dropdown:hover .dropdown-content {
+        display:none; /* Disable hover on mobile */
+    }
+
+    .dropdown-content {
+        z-index: 100;
+        position:relative; /* Position dropdown relative to the parent on mobile */
+        width: 100%; /* Make the dropdown content take up the full width of the screen */
+        border-radius: 15px;
+    }
+    
+     .content {
+            flex-direction: column;
+     }
+
+     .video-container {
+            opacity: 1;
+            width: 30%;
+            height: 100%;
+            object-fit: contain;
+     }
+
+     .product-content {
+            flex-direction: column;
+            align-items:center;
+
+     }
+
+     .product-content img {
+            flex-direction : column ;
+            width :30% ; 
+     }
+}
 
 .switch {
     position: absolute;
