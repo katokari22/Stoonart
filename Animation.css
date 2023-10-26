@@ -343,7 +343,7 @@ footer a:hover img {
         margin-bottom: 20px;
     }
 }
-@media screen and (min-width:769px) and (max-width:1200px) {
+@media screen and (min-width:980px) and (max-width:1200px) {
     body{
         background-image: url('Background2.jpg');
         background-size: cover;
