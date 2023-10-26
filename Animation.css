@@ -487,13 +487,13 @@ footer a:hover img {
           margin-bottom :20px ;
       }
 }
-@media only screen and (width: 390px) and (height: 844px) and (-webkit-device-pixel-ratio: 3) {
-    /* Your CSS rules here */
-    body{
-        background-image: url('Background2.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)
+         {
+         body{
+    background-image: url('Background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     }
     .content {
         order: 1;
@@ -577,60 +577,58 @@ footer a:hover img {
         position: absolute;
         inset: 80% 0.5rem 0.5rem;
         translate: 0;
-        transform:
-[assistant]<|im_continue|>(#message)
-translateZ(-50px);
-background:black; 
-filter : blur(1rem);
-z-index :1 ;
-transition : rotate var(--timing), translate var(--timing);
-}
+        transform: translateZ(-50px);
+        background: black;
+        filter: blur(1rem);
+        z-index: 1;
+        transition: rotate var(--timing), translate var(--timing);
+    }
 
-.yoda:hover::after{
-rotate : x calc(var(--rotation) * -1);
-translate :0 30px ;
-}
+    .yoda:hover::after {
+        rotate: x calc(var(--rotation) * -1);
+        translate: 0 30px;
+    }
 
-.yoda .logo{
-z-index :100 ;
-width :25% ;
-margin-inline : auto ;
-inset : auto 0 2rem ;
-transform : translateX(-0.5rem) translateY(7rem) translateZ(20px);
-transition : var(--timing);
-}
+    .yoda .logo {
+        z-index: 100;
+        width: 25%;
+        margin-inline: auto;
+        inset: auto 0 2rem;
+        transform: translateX(-0.5rem) translateY(7rem) translateZ(20px);
+        transition: var(--timing);
+    }
 
-.yoda:hover .logo{
-transform : translateX(-0.5rem) translateY(5rem) translateZ(50px);
-rotate : x calc(var(--rotation) * -1);
-}
+    .yoda:hover .logo {
+        transform: translateX(-0.5rem) translateY(5rem) translateZ(50px);
+        rotate: x calc(var(--rotation) * -1);
+    }
 
-.yoda .front-image{
-scale :1 ;
-transform-origin : bottom ;
-opacity :0 ;
-z-index :100 ;
-transition : var(--timing);
-}
-.yoda:hover .front-image{
-opacity :1 ;
-transform : translateX(-0.25rem) translateY(-3rem) translateZ(-10px);
-rotate : x calc(var(--rotation) * -1);
-}
-.yoda .bg-image{
-scale :1 ;
-position:absolute ;
-z-index :10 ;
-height :150% ;
-width :200% ; /* Make sure the image covers the entire .yoda element */
-object-fit : cover ;
-object-position:center ; /* Center the image within .yoda */
-}
+    .yoda .front-image {
+        scale: 1;
+        transform-origin: bottom;
+        opacity: 0;
+        z-index: 100;
+        transition: var(--timing);
+    }
+    .yoda:hover .front-image {
+        opacity: 1;
+        transform: translateX(-0.25rem) translateY(-3rem) translateZ(-10px);
+        rotate: x calc(var(--rotation) * -1);
+    }
+    .yoda .bg-image {
+        scale: 1;
+        position: absolute;
+        z-index: 10;
+        height: 150%;
+        width: 200%; /* Make sure the image covers the entire .yoda element */
+        object-fit: cover;
+        object-position: center; /* Center the image within .yoda */
+    }
 
-.yoda .logo,
-.yoda .front-image{
-margin-bottom :20px ;
-}
+    .yoda .logo,
+    .yoda .front-image {
+        margin-bottom: 20px;
+    }
 }
 
 
