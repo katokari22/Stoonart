@@ -487,6 +487,151 @@ footer a:hover img {
           margin-bottom :20px ;
       }
 }
+@media only screen and (width: 390px) and (height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    /* Your CSS rules here */
+    body{
+        background-image: url('Background2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .content {
+        order: 1;
+    }
+    
+    .yoda-container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 130vh;
+        margin-top: 10px;
+    }
+    
+    nav {
+        flex-direction: row;
+    }
+    
+    .logo {
+        margin-bottom: 20px;
+        position: absolute; /* Positions the logo at the top left */
+        top: 0;
+        left: 0;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        position: absolute; /* Positions the list at the top right */
+        top: 0;
+        right: 0;
+    }
+    
+    nav ul li {
+        font-family: monospace;
+        padding: 36px 0.5px; /* Increase padding for better usability */
+        font-size: 11.7px; /* Increase font size for better readability */
+        
+    }
+    footer {
+        text-align: bottom; /* Center align for mobile */
+        margin-top: 2rem;
+    }
+
+    footer a img {
+        width: 40px; /* Reduce size for mobile */
+        height: 40px; /* Reduce size for mobile */
+    }
+    .yoda {
+        width: 50%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform var(--timing) ease;
+        margin-top: 120px; /* Adjust this value based on the height of your nav bar */
+        order: 2;
+        transform-origin: top center;
+    }
+    
+    .yoda:hover {
+        transform: rotateX(var(--rotation));
+    }
+    
+
+    .yoda::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 100;
+        background-image: radial-gradient(circle, transparent 150px, black);
+        opacity: 0;
+        transition: opacity var(--timing);
+    }
+
+    .yoda:hover::before {
+        opacity: 1;
+    }
+
+    .yoda::after {
+        content: "";
+        position: absolute;
+        inset: 80% 0.5rem 0.5rem;
+        translate: 0;
+        transform:
+[assistant]<|im_continue|>(#message)
+translateZ(-50px);
+background:black; 
+filter : blur(1rem);
+z-index :1 ;
+transition : rotate var(--timing), translate var(--timing);
+}
+
+.yoda:hover::after{
+rotate : x calc(var(--rotation) * -1);
+translate :0 30px ;
+}
+
+.yoda .logo{
+z-index :100 ;
+width :25% ;
+margin-inline : auto ;
+inset : auto 0 2rem ;
+transform : translateX(-0.5rem) translateY(7rem) translateZ(20px);
+transition : var(--timing);
+}
+
+.yoda:hover .logo{
+transform : translateX(-0.5rem) translateY(5rem) translateZ(50px);
+rotate : x calc(var(--rotation) * -1);
+}
+
+.yoda .front-image{
+scale :1 ;
+transform-origin : bottom ;
+opacity :0 ;
+z-index :100 ;
+transition : var(--timing);
+}
+.yoda:hover .front-image{
+opacity :1 ;
+transform : translateX(-0.25rem) translateY(-3rem) translateZ(-10px);
+rotate : x calc(var(--rotation) * -1);
+}
+.yoda .bg-image{
+scale :1 ;
+position:absolute ;
+z-index :10 ;
+height :150% ;
+width :200% ; /* Make sure the image covers the entire .yoda element */
+object-fit : cover ;
+object-position:center ; /* Center the image within .yoda */
+}
+
+.yoda .logo,
+.yoda .front-image{
+margin-bottom :20px ;
+}
+}
 
 
 
