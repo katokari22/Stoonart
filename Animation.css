@@ -201,7 +201,7 @@ footer a img {
 footer a:hover img {
     transform: scale(1.2);
 }
-  @media screen and (max-width: 768px) {
+  media screen and (max-device-width: 480px), screen and (max-width: 768px) {
     body{
     background-image: url('Background2.jpg');
     background-size: cover;
