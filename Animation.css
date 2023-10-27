@@ -8,7 +8,9 @@
     box-sizing: border-box;
 }
 
-
+.content{
+    order: 1;
+}
 body {
     position: relative;
     width: 100%;
@@ -107,6 +109,7 @@ img {
     position: relative;
     transform-style: preserve-3d;
     transition: rotate var(--timing) ease;
+    order: 2;
   }
   
   .yoda:hover {
