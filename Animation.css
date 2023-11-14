@@ -217,8 +217,7 @@ footer a:hover img {
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        height: 130vh;
-        margin-top: 10px;
+        margin-top: 135px;
     }
     
     nav {
@@ -256,13 +255,13 @@ footer a:hover img {
         height: 40px; /* Reduce size for mobile */
     }
     .yoda {
-        width: 50%;
+        width: 60%;
         position: relative;
         transform-style: preserve-3d;
         transition: transform var(--timing) ease;
-        margin-top: 120px; /* Adjust this value based on the height of your nav bar */
+        margin-top: -25px; /* Adjust this value based on the height of your nav bar */
         order: 2;
-        transform-origin: top center;
+        transform-origin: center;
     }
     
     .yoda:hover {
@@ -306,12 +305,12 @@ footer a:hover img {
         width: 25%;
         margin-inline: auto;
         inset: auto 0 2rem;
-        transform: translateX(-0.5rem) translateY(7rem) translateZ(20px);
+        transform: translateX(-0.25rem) translateY(-1rem) translateZ(20px);
         transition: var(--timing);
     }
 
     .yoda:hover .logo {
-        transform: translateX(-0.5rem) translateY(5rem) translateZ(50px);
+        transform: translateX(-0.5rem) translateY(-1rem) translateZ(50px);
         rotate: x calc(var(--rotation) * -1);
     }
 
@@ -331,8 +330,8 @@ footer a:hover img {
         scale: 1;
         position: absolute;
         z-index: 10;
-        height: 150%;
-        width: 200%; /* Make sure the image covers the entire .yoda element */
+        height: 81.5%;
+        width: 100%; /* Make sure the image covers the entire .yoda element */
         object-fit: cover;
         object-position: center; /* Center the image within .yoda */
     }
