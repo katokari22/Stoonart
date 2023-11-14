@@ -358,8 +358,8 @@ footer a:hover img {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        height: 70vh;
-        margin-top: 10px;
+        height: 80vh;
+        margin-top: 30px;
     }
     
     nav {
@@ -397,7 +397,7 @@ footer a:hover img {
         height: 40px; /* Reduce size for mobile */
     }
     .yoda {
-        width: 22.5%;
+        width: 23.5%;
         position: relative;
         transform-style: preserve-3d;
         transition: transform var(--timing) ease;
