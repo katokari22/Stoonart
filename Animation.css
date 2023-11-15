@@ -200,7 +200,7 @@ footer a img {
 footer a:hover img {
     transform: scale(1.2);
 }
-  @media screen and (max-device-width: 480px), screen and (max-width: 768px) {
+ @media screen and (max-device-width: 480px), screen and (max-width: 768px) {
     body{
     background-image: url('Background2.jpg');
     background-size: cover;
@@ -217,7 +217,7 @@ footer a:hover img {
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        margin-top: 70px;
+        margin-top: 10px;
     }
     
     nav {
@@ -259,7 +259,8 @@ footer a:hover img {
         position: relative;
         transform-style: preserve-3d;
         transition: transform var(--timing) ease;
-        margin-top: 40px; /* Adjust this value based on the height of your nav bar */
+        margin-top: 100px;
+        margin-bottom: -70px; /* Adjust this value based on the height of your nav bar */
         order: 2;
         transform-origin: center;
     }
